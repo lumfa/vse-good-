@@ -54,7 +54,7 @@ server/
 ├── DTOs/                  # Request/Response модели
 ├── database/              # SQL-скрипты создания таблиц и сид-данных
 └── docs/                  # Документация (OpenAPI, DocFX)
-
+```
 
 Требования
 - Android 7.0 (API 24) и выше
