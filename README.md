@@ -32,29 +32,28 @@ Vse good?
 - Безопасность: JWT (HS256), PBKDF2-SHA256 (пароли), AES-256-CBC (PII-данные)
 - Инфраструктура: Docker
 
-Структура проекта
-
+```bash
 app/src/main/java/com/example/feel_journal/
 ├── data/
-│   ├── model/            # Доменные data-классы (User, Emotion, Category, EmotionEntry, Notification)
+│   ├── model/             # Доменные data-классы (User, Emotion, Category, EmotionEntry, Notification)
 │   └── remote/
-│       ├── api/          # Retrofit API-интерфейсы (6 шт)
-│       ├── dto/          # Request/Response DTO
-│       ├── interceptor/  # AuthInterceptor (JWT-заголовок)
-│       └── ApiClient     # Retrofit singleton
+│       ├── api/           # Retrofit API-интерфейсы
+│       ├── dto/           # Request/Response DTO
+│       ├── interceptor/   # AuthInterceptor (JWT-заголовок)
+│       └── ApiClient      # Retrofit singleton
 ├── ui/
-│   ├── state/            # UiState sealed classes
-│   └── viewmodel/       # ViewModels (6 шт)
+│   ├── state/             # UiState sealed classes
+│   └── viewmodel/         # ViewModels
 
 server/
-├── Controllers/          # ASP.NET Core контроллеры (6 шт)
-├── Models/               # EF Core entities (5 шт)
-├── Data/                 # AppDbContext (Fluent API конфигурация)
-├── Services/             # AuthService
-├── Security/             # JwtService, PasswordHasher, AesEncryptor
-├── DTOs/                 # Request/Response модели
-├── database/             # SQL-скрипты создания таблиц и сид-данных
-└── docs/                 # Документация (OpenAPI, DocFX)
+├── Controllers/           # ASP.NET Core
+├── Models/                # EF Core entities
+├── Data/                  # AppDbContext
+├── Services/              # AuthService
+├── Security/              # JwtService, PasswordHasher, AesEncryptor
+├── DTOs/                  # Request/Response модели
+├── database/              # SQL-скрипты создания таблиц и сид-данных
+└── docs/                  # Документация (OpenAPI, DocFX)
 
 
 Требования
